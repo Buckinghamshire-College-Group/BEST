@@ -9,36 +9,36 @@
 </head>
 <body style="background-color:#006ab4;">
 
-<div class="navbar">
-  <a href="./Home.html"><img src="Logo.png" alt="logo"></a>
-  <a href="./Home.html">Home</a>
-  <div class="dropdown">
-  <button class="dropbtn" onclick="myFunction()">Support
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-content" id="myDropdown">
-    <a href="./BusinessSupport.html">Business Support</a>
-    <a href="./CareerInfoSupport.html">Career Information, Advice and Guidance Support</a>
-    <a href="#">Drug and Alcohol Dependency Support</a>
-    <a href="#">Employment Support</a>
-    <a href="#">Mental Health Support</a>
-    <a href=",.UpskillingSupport.html">Upskilling Support</a>
-    <a href="./WelfareSupport.html">Welfare Support</a>
-  </div>
-  </div>
+  <div class="navbar">
+    <a href="./Home.html"><img src="Images/Logo.png" alt="logo"></a>
+    <a href="./Home.html">Home</a>
+    <a href="javascript:void(0);" onclick="openLoginModal()">Login/Sign Up</a> <!-- Open modal -->
+    <div class="dropdown">
+      <button class="dropbtn" onclick="myFunction()">Support
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content" id="myDropdown">
+        <a href="./BusinessSupport.html">Business Support</a>
+        <a href="./CareerInfoSupport.html">Career Information, Advice and Guidance Support</a>
+        <a href="#">Drug and Alcohol Dependency Support</a>
+        <a href="#">Employment Support</a>
+        <a href="#">Mental Health Support</a>
+        <a href="#">Upskilling Support</a>
+        <a href="#">Welfare Support</a>
+      </div>
+    </div>
     <a href="#">CV & Cover Letter</a>
     <a href="./InterviewPrep.html">Interview Prep</a>
-  <input type="text" placeholder="Search..">
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      </a>
+    <input type="text" placeholder="Search..">
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    </a>
   </div>
 
   <h1>Welcome to BEST</h1>
   <p1>Empowering your career journey, whether you're seeking new opportunities or looking to grow in your current role</p1>
 
-  <h3>Help with Support</h3>
+  <h2>Help with Support</h2>
 
-  <!-- Form Section -->
   <div class="form-container">
     <form id="supportForm">
       <label for="employmentStatus">I am:</label>
@@ -66,9 +66,68 @@
     <div id="supportResult" class="support-result"></div>
   </div>
 
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeLoginModal()">&times;</span>
+      
+      <div id="loginForm">
+        <h2>Login</h2>
+        <form>
+          <input type="text" id="loginEmail" placeholder="Email" required>
+          <input type="password" id="loginPassword" placeholder="Password" required>
+          <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="javascript:void(0);" onclick="showSignup()">Sign Up</a></p>
+      </div>
+      
+      <div id="signupForm" style="display:none;">
+        <h2>Sign Up</h2>
+        <form>
+          <input type="text" id="signupName" placeholder="Full Name" required>
+          <input type="email" id="signupEmail" placeholder="Email" required>
+          <input type="password" id="signupPassword" placeholder="Password" required>
+          <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="javascript:void(0);" onclick="showLogin()">Login</a></p>
+      </div>
+    </div>
+  </div>
+
   <footer style="background-color: white; color: #006ab4; padding: 20px; text-align: center;">
     <p>&copy; 2025 Buckinghamshire Council</p>
   </footer>
+
+  <script>
+  
+    function openLoginModal() {
+      document.getElementById("loginModal").style.display = "block";
+    }
+
+ 
+    function closeLoginModal() {
+      document.getElementById("loginModal").style.display = "none";
+    }
+
+   
+    function showSignup() {
+      document.getElementById("loginForm").style.display = "none";
+      document.getElementById("signupForm").style.display = "block";
+    }
+
+    
+    function showLogin() {
+      document.getElementById("signupForm").style.display = "none";
+      document.getElementById("loginForm").style.display = "block";
+    }
+
+
+    window.onclick = function(event) {
+      var modal = document.getElementById("loginModal");
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
 
 </body>
 </html>
