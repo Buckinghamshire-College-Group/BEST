@@ -14,10 +14,6 @@ window.onclick = function(e) {
   }
 }
 
-// Function to toggle the dropdown menu in the navbar
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
 
 // Shows Support for choices
 function showSupport() {
