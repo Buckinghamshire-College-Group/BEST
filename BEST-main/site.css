@@ -65,6 +65,10 @@ body {
 .show {
   display: block;
 }
+.Support {
+  margin-left:30px;
+  margin-right: 30px;
+}
 h2 {
   font-size: 32px;
   font-family: Calibri Bold, sans-serif;
@@ -83,7 +87,7 @@ p {
 }
 .InterviewPrep{
   color: white;
-  font-size: 24px;
+  font-size: 29px;
 }
 footer{
   background-color: white;
@@ -96,4 +100,5 @@ footer{
 }
 footer p{
   color: black;
+  font-size: 29px;
 }
