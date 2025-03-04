@@ -13,3 +13,26 @@ window.onclick = function(e) {
     }
   }
 }
+
+
+function showSupport() {
+  const employmentStatus = document.getElementById('employmentStatus').value;
+  const workStatus = document.getElementById('workStatus').value;
+  const barriers = document.getElementById('barriers').value;
+  let resultText = "";
+
+  if (employmentStatus === 'unemployed') {
+    if (workStatus === 'notWorkedInNineMonths' && barriers === 'disability') {
+      resultText = "We recommend the following support options for you: Routes to Work, Skills Bootcamps, Supported Internships.";
+    } else {
+      resultText = "We recommend the following support options for you: Routes to Work, Skills Bootcamps.";
+    }
+  }
+
+  if (employmentStatus === 'employed') {
+    if (workStatus === 'worked' && barriers === 'noBarriers') {
+      resultText = "We recommend the following support options for you: Buckinghamshire Council jobs site, Skills Bootcamps.";
+    }
+  }
+
+ 
