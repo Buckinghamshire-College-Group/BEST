@@ -102,3 +102,86 @@ footer p{
   color: black;
   font-size: 29px;
 }
+
+h1 {
+  color: white;
+  text-align: left;
+  font-size: 70px; 
+  margin-left: 200px;
+}
+
+
+p1 {
+  color: white;
+  text-align: left;
+  font-size: 28px; 
+  margin-left: 210px; 
+}
+
+
+h3 {
+  color: white;
+  text-align: left;
+  font-size: 36px;
+  margin-left: 210px;
+}
+
+.form-container {
+  margin-left: 210px;
+  color: white;
+  padding-top: 20px;
+}
+
+form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+}
+
+label {
+  font-size: 18px;
+  display: block;
+  margin-top: 10px;
+  color: black;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #006ab4;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #005b8e;
+}
+
+.support-result {
+  margin-top: 20px;
+  font-size: 18px;
+  color: white;
+}
+
+footer1 {
+
+      background-color: white;
+      color: #006ab4;
+      padding: 20px;
+      text-align: center;
+      top: 450px;
+      bottom: 0px;
+      position: relative;
+    }
+
