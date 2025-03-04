@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BEST | Support</title>
+  <link rel="stylesheet" type="text/css" href="site.css">
+  <script src="site.js" defer></script>
+</head>
+<body style="background-color:#006ab4;">
+
+  <div class="navbar">
+  <a href="./Home.html"><img src="Logo.png" alt="logo"></a>
+  <a href="./Home.html">Home</a>
+  <div class="dropdown">
+  <button class="dropbtn" onclick="myFunction()">Support
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content" id="myDropdown">
+    <a href="./BusinessSupport.html">Business Support</a>
+    <a href="./CareerInfoSupport.html">Career Information, Advice and Guidance Support</a>
+    <a href="#">Drug and Alcohol Dependency Support</a>
+    <a href="#">Employment Support</a>
+    <a href="#">Mental Health Support</a>
+    <a href="#">Upskilling Support</a>
+    <a href="#">Welfare Support</a>
+  </div>
+  </div>
+    <a href="#">CV & Cover Letter</a>
+    <a href="./InterviewPrep.html">Interview Prep</a>
+  <input type="text" placeholder="Search..">
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      </a>
+  </div>
+
+  <h1>Welcome to BEST</h1>
+  <p1>Empowering your career journey, whether you're seeking new opportunities or looking to grow in your current role</p1>
+
+  <h2>Help with Support</h2>
+
+  <!-- Form Section -->
+  <div class="form-container">
+    <form id="supportForm">
+      <label for="employmentStatus">I am:</label>
+      <select id="employmentStatus">
+        <option value="unemployed">Unemployed</option>
+        <option value="employed">Employed</option>
+      </select>
+
+      <label for="workStatus">I have:</label>
+      <select id="workStatus">
+        <option value="notWorkedInNineMonths">Not worked in over nine months</option>
+        <option value="worked">Worked recently</option>
+      </select>
+
+      <label for="barriers">Do you face barriers to work?</label>
+      <select id="barriers">
+        <option value="noBarriers">No barriers</option>
+        <option value="disability">Disability - Neurodiverse Condition</option>
+        <option value="other">Other</option>
+      </select>
+
+      <button type="button" onclick="showSupport()">Get Support</button>
+    </form>
+
+    <div id="supportResult" class="support-result"></div>
+  </div>
+
+  <footer style="background-color: white; color: #006ab4; padding: 20px; text-align: center;">
+    <p>&copy; 2025 Buckinghamshire Council</p>
+  </footer>
+
+</body>
+</html>
