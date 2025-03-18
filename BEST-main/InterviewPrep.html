@@ -1,38 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="site.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="site.css">
 <script src="site.js"></script>
-<title>BEST | Support</title>
+<title>BEST | Support: Business Support</title>
 </head>
 <body style="background-color:#006ab4;">
 
-  <div class="navbar">
-    <a href="./Home.html"><img src="Logo.png" alt="logo"></a>
-    <a href="./Home.html">Home</a>
-    <a href="javascript:void(0);" onclick="openLoginModal()">Login/Sign Up</a> <!-- Open modal -->
-    <div class="dropdown">
-      <button class="dropbtn" onclick="myFunction()">Support
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content" id="myDropdown">
-        <a href="./BusinessSupport.html">Business Support</a>
-        <a href="./CareerInfoSupport.html">Career Information, Advice and Guidance Support</a>
-        <a href="#">Drug and Alcohol Dependency Support</a>
-        <a href="#">Employment Support</a>
-        <a href="#">Mental Health Support</a>
-        <a href="./UpskillingSupport.html">Upskilling Support</a>
-        <a href="./WelfareSupport.html">Welfare Support</a>
-      </div>
-    </div>
+<div class="navbar">
+  <a href="./Home.html"><img src="Logo.png" alt="logo"></a>
+  <a href="./Home.html">Home</a>
+  <a href="javascript:void(0);" onclick="openLoginModal()">Login/Sign Up</a> <!-- Open modal -->
+  <div class="dropdown">
+  <button class="dropbtn" onclick="myFunction()">Support
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content" id="myDropdown">
+    <a href="./BusinessSupport.html">Business Support</a>
+    <a href="./CareerInfoSupport.html">Career Information, Advice and Guidance Support</a>
+    <a href="./drugs.html">Drug and Alcohol Dependency Support</a>
+    <a href="./EmploymentSupport.html">Employment Support</a>
+    <a href="./MentalSupport.html">Mental Health Support</a>
+    <a href="./UpskillingSupport.html">Upskilling Support</a>
+    <a href="./WelfareSupport.html">Welfare Support</a>
+  </div>
+  </div>
     <a href="#">CV & Cover Letter</a>
     <a href="./InterviewPrep.html">Interview Prep</a>
-    <input type="text" placeholder="Search..">
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    </a>
+    <div class="navbar">
+      <div class="InterviewPrep">Interview Prep</div>
+
+      <!-- Search Bar -->
+
+      <div class="search-container">
+
+        <!-- this will automatically apply "q" if you put the name in input q -->
+
+    <form class="searchBox" action="https://www.google.com/search" method="get">
+
+      <!-- Important! name should be = "q" or else it will not
+       work and in input you should also add value=""
+       to get the input value -->
+
+      <input type="text" class="search" name="q" value="" placeholder="Search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+
+    </form>
+      </div>
+        
+      </div>
+    </div>
   </div>
 
 <h2>Interview Prep</h2>
