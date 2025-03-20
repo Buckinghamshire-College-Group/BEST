@@ -1,3 +1,4 @@
+
 html, body {
   height: 100%;
   width: 100%;
@@ -6,17 +7,18 @@ html, body {
 }
 body {
   position: relative;
+  background-color: white;
 }
 .navbar {
   overflow: hidden;
-  background-color: white;
-  font-family: Calibri Bold;
+  background-color: #2c2d84;
+  font-family: Trebuchet Bold;
 }
 
 .navbar a {
   float: left;
   font-size: 28px;
-  color: black;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -24,7 +26,7 @@ body {
   widows: 100%;
 }
 .navbar a img {
-  height: 45px;
+  height: 70px;
 }
 
 .dropdown {
@@ -37,7 +39,7 @@ body {
   font-size: 28px;  
   border: none;
   outline: none;
-  color: black;
+  color: white;
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
@@ -47,7 +49,7 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: ghostwhite;
+  background-color: #2c2d84;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -55,7 +57,7 @@ body {
 
 .dropdown-content a {
   float: none;
-  color: black;
+  color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -65,33 +67,45 @@ body {
 .show {
   display: block;
 }
+.search-container {
+  position: relative;
+  top: -29px; /* Moves it slightly up */
+  left: 85%; /* Moves it slightly to the right */
+  background-color: #2c2d84;
+}
+/* Search Button*/
+.search-container button:hover {
+  background: #ccc;
+}
 .Support {
   margin-left:30px;
   margin-right: 30px;
 }
 h2 {
   font-size: 32px;
-  font-family: Calibri Bold, sans-serif;
-  color: white;
+  font-family: Trebuchet Bold, sans-serif;
+  color: black;
+  margin-left: 30px;
 }
 a{
   font-size: 29px;
-  font-family:Calibri Regular, sans-serif ;
-  color: white;
+  font-family:Trebuchet Regular, sans-serif ;
+  color: black;
 }
 
 p {
   font-size: 29px;
-  font-family:Calibri Regular, sans-serif ;
-  color: white;
+  font-family:Trebuchet Regular, sans-serif ;
+  color: black;
 }
+
 .InterviewPrep{
-  color: white;
+  color: black;
   font-size: 29px;
+  margin-left: 30px;
 }
 footer{
-  background-color: white;
-  color: black;
+  background-color: #2c2d84;
   padding: 20px;
   text-align: center;
   display: table-row;
@@ -99,12 +113,12 @@ footer{
   position: relative;
 }
 footer p{
-  color: black;
+  color: white;
   font-size: 29px;
 }
 
 h1 {
-  color: white;
+  color: black;
   text-align: left;
   font-size: 70px; 
   margin-left: 200px;
@@ -112,15 +126,14 @@ h1 {
 
 
 p1 {
-  color: white;
+  color: black;
   text-align: left;
   font-size: 28px; 
   margin-left: 210px; 
+
 }
-
-
-h3 {
-  color: white;
+h3{
+  color: black;
   text-align: left;
   font-size: 36px;
   margin-left: 210px;
@@ -133,7 +146,7 @@ h3 {
 }
 
 form {
-  background-color: white;
+  background-color: #006ab4;
   padding: 20px;
   border-radius: 10px;
   width: 400px;
@@ -143,7 +156,7 @@ label {
   font-size: 18px;
   display: block;
   margin-top: 10px;
-  color: black;
+  color: white;
 }
 
 select {
@@ -154,8 +167,8 @@ select {
 }
 
 button {
-  background-color: #006ab4;
-  color: white;
+  background-color: white;
+  color: black;
   padding: 10px 20px;
   border: none;
   font-size: 18px;
@@ -171,7 +184,7 @@ button:hover {
 .support-result {
   margin-top: 20px;
   font-size: 18px;
-  color: white;
+  color: Black;
 }
 
      
@@ -224,3 +237,8 @@ button:hover {
       max-width: 300px;
       font-size: 16px;
     }
+li{
+  font-size: 29px;
+  font-family:Trebuchet Regular, sans-serif ;
+  color: black;
+}
