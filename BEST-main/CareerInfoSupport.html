@@ -30,10 +30,25 @@
   </div>
     <a href="#">CV & Cover Letter</a>
     <a href="./InterviewPrep.html">Interview Prep</a>
-  <input type="text" placeholder="Search..">
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      </a>
-  </div>
+ 
+	
+      <!-- Search Bar -->
+
+      <div class="search-container">
+
+        <!-- this will automatically apply "q" if you put the name in input q -->
+
+    <form class="searchBox" action="https://www.google.com/search" method="get">
+
+      <!-- Important! name should be = "q" or else it will not
+       work and in input you should also add value=""
+       to get the input value -->
+
+      <input type="text" class="search" name="q" value="" placeholder="Search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+
+    </form>
+      </div>
 
   <div class="Support">
     <h2>Career Information, Advice and Guidance Support</h2>
