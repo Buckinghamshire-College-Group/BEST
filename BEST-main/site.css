@@ -71,7 +71,7 @@ body {
   position: relative;
   top: -29px; /* Moves it slightly up */
   left: 85%; /* Moves it slightly to the right */
-  background-color: #2c2d84;
+  background-color: inherit;
 }
 /* Search Button*/
 .search-container button:hover {
