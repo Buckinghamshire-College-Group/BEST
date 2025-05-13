@@ -10,6 +10,8 @@ body {
   background-color: white;
 }
 .navbar {
+  /* keeps the nav bar nice and on one line */
+  display: flex;
   overflow: hidden;
   background-color: #2c2d84;
   font-family: Trebuchet Bold;
@@ -26,7 +28,7 @@ body {
   widows: 100%;
 }
 .navbar a img {
-  height: 130px;
+  height: 70px;
 }
 
 .dropdown {
@@ -68,14 +70,40 @@ body {
   display: block;
 }
 .search-container {
-  position: relative;
-  top: -29px; /* Moves it slightly up */
-  left: 85%; /* Moves it slightly to the right */
-  background-color: inherit;
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Push to right */
+  margin-right: 16px; /* Optional: space from edge */
 }
+
+
+
+.searchBox input[type="text"] {
+  width: 140px; /* smaller width */
+  padding: 6px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.searchBox button {
+  padding: 6px 10px;
+  font-size: 14px;
+  background-color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+
+
+  
+  
+
 /* Search Button*/
 .search-container button:hover {
   background: #ccc;
+  
 }
 .Support {
   margin-left:30px;
@@ -86,6 +114,7 @@ h2 {
   font-family: Trebuchet Bold, sans-serif;
   color: black;
   margin-left: 30px;
+  cursor: grab;
 }
 a{
   font-size: 29px;
@@ -111,6 +140,7 @@ footer{
   display: table-row;
   height: 0;
   position: relative;
+  cursor: crosshair;
 }
 footer p{
   color: white;
@@ -122,6 +152,7 @@ h1 {
   text-align: left;
   font-size: 70px; 
   margin-left: 200px;
+  cursor: e-resize;
 }
 
 
@@ -130,6 +161,7 @@ p1 {
   text-align: left;
   font-size: 28px; 
   margin-left: 210px; 
+  cursor: progress;
 
 }
 h3{
@@ -137,6 +169,7 @@ h3{
   text-align: left;
   font-size: 36px;
   margin-left: 210px;
+  cursor: menu;
 }
 
 .form-container {
@@ -146,7 +179,7 @@ h3{
 }
 
 form {
-  background-color: #006ab4;
+
   padding: 20px;
   border-radius: 10px;
   width: 400px;
