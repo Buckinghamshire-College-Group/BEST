@@ -1,121 +1,116 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="site.css">
-<script src="site.js"></script>
-<title>BEST | Home Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BEST | Home Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="site.css">
+  <script src="site.js" defer></script>
 </head>
 <body>
 
-<div class="navbar">
-  <a href="https://www.buckinghamshire.gov.uk"><img src="Logo.png" alt="logo"></a>
-  <a href="./Home.html">Home</a>
-  <a href="javascript:void(0);" onclick="openLoginModal()">Login/Sign Up</a> <!-- Open modal -->
-  <div class="dropdown">
-  <button class="dropbtn" onclick="myFunction()">Support
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-content" id="myDropdown">
-    <a href="./BusinessSupport.html">Business Support</a>
-    <a href="./CareerInfoSupport.html">Career Information, Advice and Guidance Support</a>
-    <a href="./drugs.html">Drug and Alcohol Dependency Support</a>
-    <a href="./EmploymentSupport.html">Employment Support</a>
-    <a href="./MentalSupport.html">Mental Health Support</a>
-    <a href="./UpskillingSupport.html">Upskilling Support</a>
-    <a href="./WelfareSupport.html">Welfare Support</a>
-  </div>
-  
-    <a href="#">CV & Cover Letter</a>
-    <a href="./InterviewPrep.html">Interview Prep</a>
-     </div>
-  <!-- Search Bar -->
+  <header class="navbar">
+    <a href="https://www.buckinghamshire.gov.uk" class="logo-link">
+      <img src="Logo.png" alt="logo">
+    </a>
 
-      <div class="search-container">
+    <nav class="nav-links">
+      <a href="./Home.html">Home</a>
+      <a href="javascript:void(0);" onclick="openLoginModal()">Login/Sign Up</a>
 
-        <!-- this will automatically apply "q" if you put the name in input q -->
-
-    <form class="searchBox" action="https://www.google.com/search" method="get">
-
-      <!-- Important! name should be = "q" or else it will not
-       work and in input you should also add value=""
-       to get the input value -->
-
-      <input type="text" class="search" name="q" value="" placeholder="Search">
-      <button type="submit"><i class="fa fa-search"></i></button>
-
-    </form>
+      <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Support <i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="./BusinessSupport.html">Business Support</a>
+          <a href="./CareerInfoSupport.html">Career Info, Advice & Guidance</a>
+          <a href="./drugs.html">Drug and Alcohol Dependency</a>
+          <a href="./EmploymentSupport.html">Employment Support</a>
+          <a href="./MentalSupport.html">Mental Health Support</a>
+          <a href="./UpskillingSupport.html">Upskilling Support</a>
+          <a href="./WelfareSupport.html">Welfare Support</a>
+        </div>
       </div>
-        
+
+      <a href="./InterviewPrep.html">Interview Prep</a>
+    </nav>
+
+    <div class="search-container">
+      <form class="searchBox" action="https://www.google.com/search" method="get">
+        <input type="text" class="search" name="q" placeholder="Search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+  </header>
+
+  <main>
+    <h1>Welcome to BEST</h1>
+    <p class="intro">Empowering your career journey, whether you're seeking new opportunities or looking to grow in your current role</p>
+
+    <h2 class="support-heading">Help with Support</h2>
+
+    <div class="form-container">
+      <form id="supportForm">
+        <label for="employmentStatus">I am:</label>
+        <select id="employmentStatus">
+          <option value="unemployed">Unemployed</option>
+          <option value="employed">Employed</option>
+        </select>
+
+        <label for="workStatus">I have:</label>
+        <select id="workStatus">
+          <option value="notWorkedInNineMonths">Not worked in over nine months</option>
+          <option value="worked">Worked recently</option>
+        </select>
+
+        <label for="barriers">Do you face barriers to work?</label>
+        <select id="barriers">
+          <option value="noBarriers">No barriers</option>
+          <option value="disability">Disability - Neurodiverse Condition</option>
+          <option value="other">Other</option>
+        </select>
+
+        <button type="button" onclick="showSupport()">Get Support</button>
+      </form>
+
+      <div id="supportResult" class="support-result"></div>
+    </div>
+
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeLoginModal()">&times;</span>
+
+        <div id="loginForm">
+          <h2>Login</h2>
+          <form>
+            <input type="text" id="loginEmail" placeholder="Email" required>
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <button type="submit">Login</button>
+          </form>
+          <p>Don't have an account? <a href="javascript:void(0);" onclick="showSignup()">Sign Up</a></p>
+        </div>
+
+        <div id="signupForm" style="display:none;">
+          <h2>Sign Up</h2>
+          <form>
+            <input type="text" id="signupName" placeholder="Full Name" required>
+            <input type="email" id="signupEmail" placeholder="Email" required>
+            <input type="password" id="signupPassword" placeholder="Password" required>
+            <button type="submit">Sign Up</button>
+          </form>
+          <p>Already have an account? <a href="javascript:void(0);" onclick="showLogin()">Login</a></p>
+        </div>
       </div>
     </div>
-  </div>
-  <h1>Welcome to BEST</h1>
-  <p1>Empowering your career journey, whether you're seeking new opportunities or looking to grow in your current role</p1>
-
-  <h2>Help with Support</h2>
-
-  <div class="form-container">
-    <form id="supportForm">
-      <label for="employmentStatus">I am:</label>
-      <select id="employmentStatus">
-        <option value="unemployed">Unemployed</option>
-        <option value="employed">Employed</option>
-      </select>
-
-      <label for="workStatus">I have:</label>
-      <select id="workStatus">
-        <option value="notWorkedInNineMonths">Not worked in over nine months</option>
-        <option value="worked">Worked recently</option>
-      </select>
-
-      <label for="barriers">Do you face barriers to work?</label>
-      <select id="barriers">
-        <option value="noBarriers">No barriers</option>
-        <option value="disability">Disability - Neurodiverse Condition</option>
-        <option value="other">Other</option>
-      </select>
-
-      <button type="button" onclick="showSupport()">Get Support</button>
-    </form>
-
-    <div id="supportResult" class="support-result"></div>
-  </div>
-
-  <div id="loginModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeLoginModal()">&times;</span>
-      
-      <div id="loginForm">
-        <h2>Login</h2>
-        <form>
-          <input type="text" id="loginEmail" placeholder="Email" required>
-          <input type="password" id="loginPassword" placeholder="Password" required>
-          <button type="submit">Login</button>
-        </form>
-        <p>Don't have an account? <a href="javascript:void(0);" onclick="showSignup()">Sign Up</a></p>
-      </div>
-      
-      <div id="signupForm" style="display:none;">
-        <h2>Sign Up</h2>
-        <form>
-          <input type="text" id="signupName" placeholder="Full Name" required>
-          <input type="email" id="signupEmail" placeholder="Email" required>
-          <input type="password" id="signupPassword" placeholder="Password" required>
-          <button type="submit">Sign Up</button>
-        </form>
-        <p>Already have an account? <a href="javascript:void(0);" onclick="showLogin()">Login</a></p>
-      </div>
-    </div>
-  </div>
+  </main>
 
   <footer>
     <p>&copy; 2025 Buckinghamshire Council</p>
   </footer>
 
-  <script>
-  
+
+ <script>
+ 
     function openLoginModal() {
       document.getElementById("loginModal").style.display = "block";
     }
@@ -131,7 +126,7 @@
       document.getElementById("signupForm").style.display = "block";
     }
 
-    
+   
     function showLogin() {
       document.getElementById("signupForm").style.display = "none";
       document.getElementById("loginForm").style.display = "block";

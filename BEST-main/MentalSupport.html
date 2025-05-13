@@ -6,70 +6,59 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="site.css">
 <script src="site.js"></script>
-<title>BEST | Support: Mental Health Support</title>
+<title>BEST | Support: Business Support</title>
 </head>
 <body >
 
-<div class="navbar">
-  <a href="https://www.buckinghamshire.gov.uk"><img src="Logo.png" alt="logo"></a>
-  <a href="./Home.html">Home</a>
-  <a href="javascript:void(0);" onclick="openLoginModal()">Login/Sign Up</a> <!-- Open modal -->
-  <div class="dropdown">
-  <button class="dropbtn" onclick="myFunction()">Support
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-content" id="myDropdown">
-    <a href="./BusinessSupport.html">Business Support</a>
-    <a href="./CareerInfoSupport.html">Career Information, Advice and Guidance Support</a>
-    <a href="./drugs.html">Drug and Alcohol Dependency Support</a>
-    <a href="./EmploymentSupport.html">Employment Support</a>
-    <a href="./MentalSupport.html">Mental Health Support</a>
-    <a href="./UpskillingSupport.html">Upskilling Support</a>
-    <a href="./WelfareSupport.html">Welfare Support</a>
-  </div>
- 
-    <a href="#">CV & Cover Letter</a>
-    <a href="./InterviewPrep.html">Interview Prep</a>
-     </div>
-  
-  <!-- Search Bar -->
+ <header class="navbar">
+    <a href="https://www.buckinghamshire.gov.uk" class="logo-link">
+      <img src="Logo.png" alt="logo">
+    </a>
 
-      <div class="search-container">
+    <nav class="nav-links">
+      <a href="./Home.html">Home</a>
+      <a href="javascript:void(0);" onclick="openLoginModal()">Login/Sign Up</a>
 
-        <!-- this will automatically apply "q" if you put the name in input q -->
-
-    <form class="searchBox" action="https://www.google.com/search" method="get">
-
-      <!-- Important! name should be = "q" or else it will not
-       work and in input you should also add value=""
-       to get the input value -->
-
-      <input type="text" class="search" name="q" value="" placeholder="Search">
-      <button type="submit"><i class="fa fa-search"></i></button>
-
-    </form>
+      <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Support <i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="./BusinessSupport.html">Business Support</a>
+          <a href="./CareerInfoSupport.html">Career Info, Advice & Guidance</a>
+          <a href="./drugs.html">Drug and Alcohol Dependency</a>
+          <a href="./EmploymentSupport.html">Employment Support</a>
+          <a href="./MentalSupport.html">Mental Health Support</a>
+          <a href="./UpskillingSupport.html">Upskilling Support</a>
+          <a href="./WelfareSupport.html">Welfare Support</a>
+        </div>
       </div>
-        
-      </div>
+
+      <a href="./InterviewPrep.html">Interview Prep</a>
+    </nav>
+
+    <div class="search-container">
+      <form class="searchBox" action="https://www.google.com/search" method="get">
+        <input type="text" class="search" name="q" placeholder="Search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
     </div>
-  </div>
+  </header>
   <div class="Support">
     <h2>Mental Health Support</h2>
     <a href="https://able-futures.co.uk/"> Ingeus | Able Futures</a>
     <p>Nine months confidential, no cost advice, guidance and support from mental health professionals to help you cope with work while you manage a mental health condition such as anxiety, depression or stress.</p>
     <br>
     <a href="https://www.waythrough.org.uk/find-support-near-me/buckstt/ ">Waythrough | Employment Services </a>
-    <p>"Embedded employment support within NHS Talking Therapies provided by employment Specialists alongside clinical treatment for mild to moderate mental health issues. Improved joint mental health and employment outcomes. Supporting retention and return to work clients."</p>
+    <p>Embedded employment support within NHS Talking Therapies provided by employment Specialists alongside clinical treatment for mild to moderate mental health issues. Improved joint mental health and employment outcomes. Supporting retention and return to work clients.</p>
     <br>
     <a href="https://www.oxfordhealth.nhs.uk/leaflets/title/individual-placement-and-support-ips-employment-and-job-retention-service/">Oxford Health |  Individual Placement and Support (IPS) Employment and Job Retention Service</a>
-    <p>"Individual Placement and Support (IPS) Employment and Job Retention Service which provides:
+    <p>Individual Placement and Support (IPS) Employment and Job Retention Service which provides:
         Return to work planning
         Employer engagement
         Reasonable adjustments
         Redeployment
         Managing personal information
         Mental health awareness training
-        Signposting to specialist services"</p>
+        Signposting to specialist services.</p>
       </div>
   <div id="loginModal" class="modal">
     <div class="modal-content">
