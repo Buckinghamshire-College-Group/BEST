@@ -58,13 +58,22 @@
 
         <label for="workStatus">I have:</label>
         <select id="workStatus">
+          <option value="notWorkedInNineMonths">Not worked in over three months</option>
+          <option value="notWorkedInNineMonths">Not worked in over six months</option>
           <option value="notWorkedInNineMonths">Not worked in over nine months</option>
-          <option value="worked">Worked recently</option>
+          <option value="notWorkedInNineMonths">Not worked in over twelve months</option>
+          <option value="worked">Worked recently in the last week</option>
+          <option value="worked">Worked recently in the 3 weeks month</option>
+          <option value="worked">Worked recently in the last 5 weeks</option>
+          <option value="worked">Worked recently in the last month</option>
         </select>
 
         <label for="barriers">Do you face barriers to work?</label>
         <select id="barriers">
           <option value="noBarriers">No barriers</option>
+          <option value="noBarriers">Mental Health Reasons</option>
+          <option value="noBarriers">Alcohol Addict</option>
+          <option value="noBarriers">Drug Addict</option>
           <option value="disability">Disability - Neurodiverse Condition</option>
           <option value="other">Other</option>
         </select>
