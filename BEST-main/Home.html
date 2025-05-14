@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,7 +31,6 @@
         </div>
       </div>
 
-      
       <a href="./InterviewPrep.html">Interview Prep</a>
     </nav>
 
@@ -109,30 +107,24 @@
     <p>&copy; 2025 Buckinghamshire Council</p>
   </footer>
 
-
- <script>
- 
+  <script>
     function openLoginModal() {
       document.getElementById("loginModal").style.display = "block";
     }
 
- 
     function closeLoginModal() {
       document.getElementById("loginModal").style.display = "none";
     }
 
-   
     function showSignup() {
       document.getElementById("loginForm").style.display = "none";
       document.getElementById("signupForm").style.display = "block";
     }
 
-   
     function showLogin() {
       document.getElementById("signupForm").style.display = "none";
       document.getElementById("loginForm").style.display = "block";
     }
-
 
     window.onclick = function(event) {
       var modal = document.getElementById("loginModal");
@@ -141,27 +133,53 @@
       }
     }
   </script>
-   <script>
+  
+  <script>
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
 
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
       }
     }
-  }
-}
+
+    function showSupport() {
+      var employmentStatus = document.getElementById("employmentStatus").value;
+      var workStatus = document.getElementById("workStatus").value;
+      var barriers = document.getElementById("barriers").value;
+
+      let supportPage = "";
+
+      if (employmentStatus === "unemployed") {
+        if (workStatus === "notWorkedInNineMonths") {
+          supportPage = "./WelfareSupport.html"; 
+        } else if (barriers === "disability") {
+          supportPage = "./MentalSupport.html"; 
+        } else {
+          supportPage = "./BusinessSupport.html"; 
+        }
+      } else if (employmentStatus === "employed") {
+        if (workStatus === "worked") {
+          supportPage = "./UpskillingSupport.html"; 
+        } else {
+          supportPage = "./EmploymentSupport.html"; 
+        }
+      }
+
+      if (supportPage) {
+        window.location.href = supportPage;
+      }
+    }
+    
   </script>
 
 </body>
