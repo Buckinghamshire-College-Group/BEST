@@ -5,7 +5,89 @@
   <title>BEST | Home Page</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="site.css">
-  <script src="site.js" defer></script>
+  <script defer>
+    // Support Dropdown Toggle
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        const dropdowns = document.getElementsByClassName("dropdown-content");
+        for (let i = 0; i < dropdowns.length; i++) {
+          const openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+
+      const modal = document.getElementById("loginModal");
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
+
+    // Login Modal Controls
+    function openLoginModal() {
+      document.getElementById("loginModal").style.display = "block";
+    }
+
+    function closeLoginModal() {
+      document.getElementById("loginModal").style.display = "none";
+    }
+
+    function showSignup() {
+      document.getElementById("loginForm").style.display = "none";
+      document.getElementById("signupForm").style.display = "block";
+    }
+
+    function showLogin() {
+      document.getElementById("signupForm").style.display = "none";
+      document.getElementById("loginForm").style.display = "block";
+    }
+
+    //Show Support Page
+    function showSupport() {
+      const employmentStatus = document.getElementById("employmentStatus").value;
+      const workStatus = document.getElementById("workStatus").value;
+      const barriers = document.getElementById("barriers").value;
+
+      let supportPage = "";
+
+      //Barriers
+      switch (barriers) {
+        case "drugs":
+        case "alcohol":
+          supportPage = "./drugs.html";
+          break;
+        case "mentalHealth":
+        case "disability":
+          supportPage = "./MentalSupport.html";
+          break;
+      }
+
+      if (!supportPage) {
+        if (employmentStatus === "unemployed") {
+          supportPage = "./WelfareSupport.html";
+        } else if (employmentStatus === "employed") {
+          if (["lastMonth", "last3Months", "last9Months"].includes(workStatus)) {
+            supportPage = "./UpskillingSupport.html";
+          } else if (workStatus === "firedQuit") {
+            supportPage = "./EmploymentSupport.html";
+          } else {
+            supportPage = "./BusinessSupport.html";
+          }
+        }
+      }
+
+      if (supportPage) {
+        window.location.href = supportPage;
+      } else {
+        alert("Please select all required fields to get support.");
+      }
+    }
+  </script>
 </head>
 <body>
 
@@ -58,32 +140,33 @@
 
         <label for="workStatus">I have:</label>
         <select id="workStatus">
-          <option value="notWorkedInNineMonths">Not worked in over a month</option>
-          <option value="notWorkedInNineMonths">Not worked in over 3 months</option>
-          <option value="notWorkedInNineMonths">Not worked in over 9 months</option>
-          <option value="notWorkedInNineMonths">Not worked in over a year</option>
-          <option value="worked">Worked recently in the last month </option>
-          <option value="worked">Worked recently in the last 3 months</option>
-          <option value="worked">Worked recently in the last 9 months</option>
-          <option value="worked">Just Fired or Quit</option>
+          <option value="overMonth">Not worked in over a month</option>
+          <option value="over3Months">Not worked in over 3 months</option>
+          <option value="over9Months">Not worked in over 9 months</option>
+          <option value="overYear">Not worked in over a year</option>
+          <option value="lastMonth">Worked recently in the last month</option>
+          <option value="last3Months">Worked recently in the last 3 months</option>
+          <option value="last9Months">Worked recently in the last 9 months</option>
+          <option value="firedQuit">Just Fired or Quit</option>
         </select>
 
         <label for="barriers">Do you face barriers to work?</label>
         <select id="barriers">
-          <option value="noBarriers">No barriers</option>
-          <option value="noBarriers">Mental Health Reasons</option>
-          <option value="noBarriers">Alcohol Addict</option>
-          <option value="noBarriers">Drug Addict</option>
+          <option value="none">No barriers</option>
+          <option value="mentalHealth">Mental Health Reasons</option>
+          <option value="alcohol">Alcohol Addiction</option>
+          <option value="drugs">Drug Addiction</option>
           <option value="disability">Disability - Neurodiverse Condition</option>
           <option value="other">Other</option>
         </select>
 
         <button type="button" onclick="showSupport()">Get Support</button>
       </form>
-
-      <div id="supportResult" class="support-result"></div>
     </div>
 
+    <div id="supportResult" class="support-result"></div>
+
+    <!-- Modal -->
     <div id="loginModal" class="modal">
       <div class="modal-content">
         <span class="close" onclick="closeLoginModal()">&times;</span>
@@ -115,81 +198,6 @@
   <footer>
     <p>&copy; 2025 Buckinghamshire Council</p>
   </footer>
-
-  <script>
-    function openLoginModal() {
-      document.getElementById("loginModal").style.display = "block";
-    }
-
-    function closeLoginModal() {
-      document.getElementById("loginModal").style.display = "none";
-    }
-
-    function showSignup() {
-      document.getElementById("loginForm").style.display = "none";
-      document.getElementById("signupForm").style.display = "block";
-    }
-
-    function showLogin() {
-      document.getElementById("signupForm").style.display = "none";
-      document.getElementById("loginForm").style.display = "block";
-    }
-
-    window.onclick = function(event) {
-      var modal = document.getElementById("loginModal");
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-  </script>
-  
-  <script>
-    function myFunction() {
-      document.getElementById("myDropdown").classList.toggle("show");
-    }
-
-    window.onclick = function(event) {
-      if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
-        }
-      }
-    }
-
-    function showSupport() {
-      var employmentStatus = document.getElementById("employmentStatus").value;
-      var workStatus = document.getElementById("workStatus").value;
-      var barriers = document.getElementById("barriers").value;
-
-      let supportPage = "";
-
-      if (employmentStatus === "unemployed") {
-        if (workStatus === "notWorkedInNineMonths") {
-          supportPage = "./WelfareSupport.html"; 
-        } else if (barriers === "disability") {
-          supportPage = "./MentalSupport.html"; 
-        } else {
-          supportPage = "./BusinessSupport.html"; 
-        }
-      } else if (employmentStatus === "employed") {
-        if (workStatus === "worked") {
-          supportPage = "./UpskillingSupport.html"; 
-        } else {
-          supportPage = "./EmploymentSupport.html"; 
-        }
-      }
-
-      if (supportPage) {
-        window.location.href = supportPage;
-      }
-    }
-    
-  </script>
 
 </body>
 </html>
