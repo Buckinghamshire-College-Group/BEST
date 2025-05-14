@@ -43,11 +43,7 @@ body {
 }
 
 .dropdown {
-  display: flex;
-  align-items: center;
-  background-color: #2c2d84;
-  padding: 10px 20px;
-  flex-wrap: wrap;
+  position: relative;
 }
 
 .dropbtn {
@@ -124,11 +120,12 @@ h1 {
   margin-left: 210px;
   color: black;
 }
-.Support{
-  font-size:26px;
-  margin-left: 210px;
-}
 
+.Support{
+  font-size: 28px;
+  margin-left: 210px;
+  color: black;
+}
 .support-heading {
   font-size: 32px;
   color: black;
