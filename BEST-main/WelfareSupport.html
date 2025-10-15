@@ -10,38 +10,12 @@
 </head>
 <body>
 
-<header class="navbar">
-    <a href="https://www.buckinghamshire.gov.uk" class="logo-link">
-      <img src="Logo.png" alt="logo">
-    </a>
-
-    <nav class="nav-links">
-      <a href="./Home.html">Home</a>
-      <a href="javascript:void(0);" onclick="openLoginModal()">Login/Sign Up</a>
-
-      <div class="dropdown">
-        <button class="dropbtn" onclick="myFunction()">Support <i class="fa fa-caret-down"></i></button>
-        <div class="dropdown-content" id="myDropdown">
-          <a href="./BusinessSupport.html">Business Support</a>
-          <a href="./CareerInfoSupport.html">Career Info, Advice & Guidance</a>
-          <a href="./drugs.html">Drug and Alcohol Dependency</a>
-          <a href="./EmploymentSupport.html">Employment Support</a>
-          <a href="./MentalSupport.html">Mental Health Support</a>
-          <a href="./UpskillingSupport.html">Upskilling Support</a>
-          <a href="./WelfareSupport.html">Welfare Support</a>
-        </div>
-      </div>
-
-      <a href="./InterviewPrep.html">Interview Prep</a>
-    </nav>
-
-    <div class="search-container">
-      <form class="searchBox" action="https://www.google.com/search" method="get">
-        <input type="text" class="search" name="q" placeholder="Search">
-        <button type="submit"><i class="fa fa-search"></i></button>
-      </form>
-    </div>
-  </header>
+<div id="header"></div>
+  <script>
+    fetch("./header.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("header").innerHTML = data);
+  </script>
   
   <div class="Welfare Support">
     <h2>Welfare Support</h2>
@@ -105,58 +79,6 @@ Functional skills and GCSE English programmes for adults to develop basic and in
   </footer>
     </div>
   </footer>
-  <script>
-  
-    function openLoginModal() {
-      document.getElementById("loginModal").style.display = "block";
-    }
-
- 
-    function closeLoginModal() {
-      document.getElementById("loginModal").style.display = "none";
-    }
-
-   
-    function showSignup() {
-      document.getElementById("loginForm").style.display = "none";
-      document.getElementById("signupForm").style.display = "block";
-    }
-
-    
-    function showLogin() {
-      document.getElementById("signupForm").style.display = "none";
-      document.getElementById("loginForm").style.display = "block";
-    }
-
-
-    window.onclick = function(event) {
-      var modal = document.getElementById("loginModal");
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-  </script>
-   <script>
-
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-  </script>
+  <script src="site.js"></script>
 </body>
 </html>
