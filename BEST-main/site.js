@@ -89,6 +89,4 @@ function showSupport() {
       }
     }
 
-// in web-app search function (site-wide)
 
-const pages = [""]

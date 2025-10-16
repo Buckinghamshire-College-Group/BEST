@@ -14,7 +14,8 @@
   <script>
     fetch("./header.html")
       .then(res => res.text())
-      .then(data => document.getElementById("header").innerHTML = data);
+      .then(data => { document.getElementById("header").innerHTML = data;
+        attachSearch();});
   </script>
   
   <div class="Support">
@@ -82,5 +83,6 @@
       <p>&copy; 2025 Buckinghamshire Council</p>
   </footer>
   <script src="site.js"></script>
+  <script src="./search.js" defer></script>
 </body>
 </html>

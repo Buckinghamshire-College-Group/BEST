@@ -14,7 +14,8 @@
   <script>
     fetch("./header.html")
       .then(res => res.text())
-      .then(data => document.getElementById("header").innerHTML = data);
+      .then(data => { document.getElementById("header").innerHTML = data;
+        attachSearch();});
   </script>
   
   <div class="Welfare Support">
@@ -54,5 +55,6 @@ Functional skills and GCSE English programmes for adults to develop basic and in
     </div>
   </footer>
   <script src="site.js"></script>
+  <script src="./search.js" defer></script>
 </body>
 </html>
