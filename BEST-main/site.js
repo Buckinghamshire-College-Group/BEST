@@ -88,3 +88,7 @@ function showSupport() {
         alert("Please select all required fields to get support.");
       }
     }
+
+// in web-app search function (site-wide)
+
+const pages = [""]
