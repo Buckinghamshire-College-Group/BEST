@@ -2,7 +2,7 @@
 
 // List of all pages
 const pages = [
-  { title: "Home", url: "Home.html" },
+  { title: "Home", url: "index.html" },
   { title: "Business Support", url: "./BusinessSupport.html" },
   { title: "Career Info, Advice & Guidance", url: "CareerInfoSupport.html" },
   { title: "Drug and Alcohol Dependency", url: "drugs.html" },
