@@ -83,26 +83,35 @@ body {
   display: flex;
   align-items: center;
   margin-left: auto;
+  gap: 0;
+}
+
+.searchBox {
+  display: flex;
+  align-items: stretch; /* same height for all */
+}
+
+.searchBox input[type="text"],
+.searchBox button {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  box-sizing: border-box;
 }
 
 .searchBox input[type="text"] {
-  width: 160px;
-  height: 25px;
-  padding: 6px;
-  font-size: 14px;
-  border: none;
+  height: 43px;
+  padding-left: 10px;
 }
+
+
 
 .searchBox button {
-  padding: 6px 10px;
-  font-size: 14px;
-  background-color: #2c2d84;
-  border: none;
+  height: 43px;
+  width: 50px;
+  background-color: #212121;
   cursor: pointer;
-}
-
-.search-container button:hover {
-  background: #ccc;
+  border-radius: 0;
 }
 
 
