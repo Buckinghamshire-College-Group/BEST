@@ -8,7 +8,7 @@ const pages = [
   { title: "Drug and Alcohol Dependency", url: "drugs.html" },
   { title: "Employment Support", url: "EmploymentSupport.html" },
   { title: "Mental Health Support", url: "MentalSupport.html" },
-  { title: "Upskilling Support", url: "UpskillingSupport.html" },
+  { title: "Learning, Training and Upskilling", url: "UpskillingSupport.html" },
   { title: "Welfare Support", url: "WelfareSupport.html" },
   { title: "Interview Prep", url: "InterviewPrep.html" }
 ];

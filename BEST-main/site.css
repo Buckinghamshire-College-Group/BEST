@@ -297,4 +297,20 @@ footer p {
     font-size: 16px;
     padding: 15px;
   }
+
+  .searchBox input[type="text"] {
+    height: 30px;
+    padding-left: 8px;
+    font-size: 14px;
+  }
+
+  .searchBox button {
+    height: 30px;
+    width: 40px;
+    font-size: 14px;
+  }
+  .search-container {
+    width: 95%;
+    justify-content: center;
+  }
 }
