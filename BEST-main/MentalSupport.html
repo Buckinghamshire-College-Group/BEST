@@ -2,49 +2,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="site.css">
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script src="site.js"></script>
-<title>BEST | Support: Mental Health Support</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="site.css">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="site.js"></script>
+  <title>BEST | Support: Mental Health Support</title>
 </head>
 <body >
 
-<div id="header"></div>
+  <div id="header"></div>
   <script>
     fetch("./header.html")
       .then(res => res.text())
       .then(data => { document.getElementById("header").innerHTML = data;
-        attachSearch();});
+      attachSearch();});
   </script>
   
-  <div class="Support">
-    <h2>Mental Health Support</h2>
-    <a href="https://able-futures.co.uk/"> Ingeus | Able Futures</a>
-    <p>Nine months confidential, no cost advice, guidance and support from mental health professionals to help you cope with work while you manage a mental health condition such as anxiety, depression or stress.</p>
-    <br>
-    <a href="https://www.waythrough.org.uk/find-support-near-me/buckstt/ ">Waythrough | Employment Services </a>
-    <p>Embedded employment support within NHS Talking Therapies provided by employment Specialists alongside clinical treatment for mild to moderate mental health issues. Improved joint mental health and employment outcomes. Supporting retention and return to work clients.</p>
-    <br>
-    <a href="https://www.oxfordhealth.nhs.uk/leaflets/title/individual-placement-and-support-ips-employment-and-job-retention-service/">Oxford Health |  Individual Placement and Support (IPS) Employment and Job Retention Service</a>
-    <p>Individual Placement and Support (IPS) Employment and Job Retention Service which provides:
-        Return to work planning
-        Employer engagement
-        Reasonable adjustments
-        Redeployment
-        Managing personal information
-        Mental health awareness training
-        Signposting to specialist services.</p>
-      </div>
+  <div class="page-container">
+    <div class="Support">
+      <h2>Mental Health Support</h2>
+      <a href="https://able-futures.co.uk/"> Ingeus | Able Futures</a>
+      <p>Nine months confidential, no cost advice, guidance and support from mental health professionals to help you cope with work while you manage a mental health condition such as anxiety, depression or stress.</p>
+      <br>
+      <a href="https://www.waythrough.org.uk/find-support-near-me/buckstt/ ">Waythrough | Employment Services </a>
+      <p>Embedded employment support within NHS Talking Therapies provided by employment Specialists alongside clinical treatment for mild to moderate mental health issues. Improved joint mental health and employment outcomes. Supporting retention and return to work clients.</p>
+      <br>
+      <a href="https://www.oxfordhealth.nhs.uk/leaflets/title/individual-placement-and-support-ips-employment-and-job-retention-service/">Oxford Health |  Individual Placement and Support (IPS) Employment and Job Retention Service</a>
+      <p>Individual Placement and Support (IPS) Employment and Job Retention Service which provides:
+          Return to work planning
+          Employer engagement
+          Reasonable adjustments
+          Redeployment
+          Managing personal information
+          Mental health awareness training
+          Signposting to specialist services.</p>
+        </div>
+  </div>
 
   <div id="footer"></div>
   <script>
     fetch("./footer.html")
       .then(res => res.text())
       .then(data => { document.getElementById("footer").innerHTML = data;
-        attachSearch();});
+      attachSearch();});
   </script>
 
   <script src="site.js"></script>

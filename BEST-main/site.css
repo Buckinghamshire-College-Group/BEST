@@ -5,6 +5,14 @@ html, body {
   flex-direction: column;
 }
 
+.page-container {
+  max-width: 1090px;
+  width: 100%;
+  margin: 0 auto; 
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
 main {
   flex: 1;
 }
@@ -12,6 +20,7 @@ main {
 body {
   font-family: Trebuchet, sans-serif;
   background-color: white;
+
 }
 
 .navbar {
@@ -129,24 +138,21 @@ body {
 h1 {
   font-size: 70px;
   color: black;
-  margin-left: 200px;
+
 }
 
 .intro {
   font-size: 28px;
-  margin-left: 210px;
   color: black;
 }
 
 .Support{
   font-size: 28px;
-  margin-left: 210px;
   color: black;
 }
 .support-heading {
   font-size: 32px;
   color: black;
-  margin-left: 210px;
 }
 
 p, li {
@@ -156,7 +162,6 @@ p, li {
 
 
 .form-container {
-  margin-left: 210px;
   color: black;
   padding-top: 20px;
 }
@@ -257,7 +262,7 @@ footer p {
 }
 
 .wrapper_large{
-  width: 100%;
+  width: 90%;
   max-width: 1090px;
   margin: 0 auto;
   padding-right: 20px;
@@ -320,7 +325,6 @@ footer{
 }
 
 .footer_wrapper{
-  width: 100%;
   max-width: 1090px;
   margin: 0 auto;
   padding-right: 20px;
@@ -422,6 +426,7 @@ footer p {
   footer {
     font-size: 16px;
     padding: 15px;
+    margin: 0;
   }
 
   .searchBox input[type="text"] {

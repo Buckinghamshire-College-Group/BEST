@@ -20,46 +20,48 @@
   </script>
 
   <main>
-    <h1>Welcome to BEST</h1>
-    <p class="intro">Empowering your career journey, whether you're seeking new opportunities or looking to grow in your current role</p>
+    <div class="page-container">
+      <h1>Welcome to BEST</h1>
+      <p class="intro">Empowering your career journey, whether you're seeking new opportunities or looking to grow in your current role</p>
 
-    <h2 class="support-heading">Help with Support</h2>
+      <h2 class="support-heading">Help with Support</h2>
 
-    <div class="form-container">
-      <form id="supportForm">
-        <label for="employmentStatus">I am:</label>
-        <select id="employmentStatus">
-          <option value="unemployed">Unemployed</option>
-          <option value="employed">Employed</option>
-        </select>
+      <div class="form-container">
+        <form id="supportForm">
+          <label for="employmentStatus">I am:</label>
+          <select id="employmentStatus">
+            <option value="unemployed">Unemployed</option>
+            <option value="employed">Employed</option>
+          </select>
 
-        <label for="workStatus">I have:</label>
-        <select id="workStatus">
-          <option value="overMonth">Not worked in over a month</option>
-          <option value="over3Months">Not worked in over 3 months</option>
-          <option value="over9Months">Not worked in over 9 months</option>
-          <option value="overYear">Not worked in over a year</option>
-          <option value="lastMonth">Worked recently in the last month</option>
-          <option value="last3Months">Worked recently in the last 3 months</option>
-          <option value="last9Months">Worked recently in the last 9 months</option>
-          <option value="firedQuit">Recently Unemployed</option>
-        </select>
+          <label for="workStatus">I have:</label>
+          <select id="workStatus">
+            <option value="overMonth">Not worked in over a month</option>
+            <option value="over3Months">Not worked in over 3 months</option>
+            <option value="over9Months">Not worked in over 9 months</option>
+            <option value="overYear">Not worked in over a year</option>
+            <option value="lastMonth">Worked recently in the last month</option>
+            <option value="last3Months">Worked recently in the last 3 months</option>
+            <option value="last9Months">Worked recently in the last 9 months</option>
+            <option value="firedQuit">Recently Unemployed</option>
+          </select>
 
-        <label for="barriers">Do you need additional support?</label>
-        <select id="barriers">
-          <option value="none">No Additional Support Needed</option>
-          <option value="mentalHealth">Mental Health Reasons</option>
-          <option value="alcohol">Alcohol Addiction</option>
-          <option value="drugs">Drug Addiction</option>
-          <option value="disability">Disability - Neurodiverse Condition</option>
-          <option value="other">Other</option>
-        </select>
+          <label for="barriers">Do you need additional support?</label>
+          <select id="barriers">
+            <option value="none">No Additional Support Needed</option>
+            <option value="mentalHealth">Mental Health Reasons</option>
+            <option value="alcohol">Alcohol Addiction</option>
+            <option value="drugs">Drug Addiction</option>
+            <option value="disability">Disability - Neurodiverse Condition</option>
+            <option value="other">Other</option>
+          </select>
 
-        <button type="button" onclick="showSupport()">Get Support</button>
-      </form>
+          <button type="button" onclick="showSupport()">Get Support</button>
+        </form>
+      </div>
+
+      <div id="supportResult" class="support-result"></div>
     </div>
-
-    <div id="supportResult" class="support-result"></div>
 
   </main>
 

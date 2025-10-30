@@ -2,38 +2,40 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="site.css">
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script src="site.js"></script>
-<title>BEST | Support: Career Information Support</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="site.css">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="site.js"></script>
+  <title>BEST | Support: Career Information Support</title>
 </head>
 <body >
 
-<div id="header"></div>
+  <div id="header"></div>
   <script>
     fetch("./header.html")
       .then(res => res.text())
       .then(data => { document.getElementById("header").innerHTML = data;
-        attachSearch();});
+      attachSearch();});
   </script>
   
-  <div class="Support">
-    <h2>Career Information, Advice, and Guidance Support</h2>
-    <a href="https://bucksskillshub.org/">Buckinghamshire Business First | Bucks Skills Hub</a>
-    <p>The Bucks Skills Hub website provides people with invaluable career-related information, including but not limited to job opportunities, career profiles, apprenticeships, work experience,  internships, events and how to make yourself more employable.  The support is open to all Buckinghamshire residents at any point in their career.</p>
-    <br>
-    <a href="https://bucksskillshub.org/pages/skills-shows">Buckinghamshire Business First | Bucks Skills Show </a>
-    <p>Interactive Careers Inspiration event for young people, teachers, parents, job seekers and job changers. Those attending the Skills Show will interactively engage with employers and next steps providers (universities, colleges and apprenticeship programmes) to find out more about:
-What it is like to work in key industries, what skills and qualifications are needed to get their first job, what steps they should take between now and the point of application.  
-There will also opportunities to 'have a go' at each of the busines stands.</p>
-     <br>
-    <a href="https://bucksskillshub.org/pages/skills-shows">Buckinghamshire Business First | Bucks Confident Futures Show </a>
-    <p>The Confident Futures Skills Show offers a uniquely enriching experience, tailored for individuals with speciial educational needs, disabilities (SEND), and others facing barriers to employment. With a focus on inclusivity and sensory consciousness, this event champions Disability Confident employers across diverse sectors, providing a spacious and welcoming environment for exploration and connection</p>
-    <br>
-    <a href="https://nationalcareers.service.gov.uk">Careers Advice - Job Profiles, Infomation and Resources | National Careers Advice</a>
-    <p>National Careers Service provides free careers information, advice and guidance. We can help you make decisions at all stages in your career</p>
+  <div class="page-container">
+    <div class="Support">
+      <h2>Career Information, Advice, and Guidance Support</h2>
+      <a href="https://bucksskillshub.org/">Buckinghamshire Business First | Bucks Skills Hub</a>
+      <p>The Bucks Skills Hub website provides people with invaluable career-related information, including but not limited to job opportunities, career profiles, apprenticeships, work experience,  internships, events and how to make yourself more employable.  The support is open to all Buckinghamshire residents at any point in their career.</p>
+      <br>
+      <a href="https://bucksskillshub.org/pages/skills-shows">Buckinghamshire Business First | Bucks Skills Show </a>
+      <p>Interactive Careers Inspiration event for young people, teachers, parents, job seekers and job changers. Those attending the Skills Show will interactively engage with employers and next steps providers (universities, colleges and apprenticeship programmes) to find out more about:
+  What it is like to work in key industries, what skills and qualifications are needed to get their first job, what steps they should take between now and the point of application.  
+  There will also opportunities to 'have a go' at each of the busines stands.</p>
+      <br>
+      <a href="https://bucksskillshub.org/pages/skills-shows">Buckinghamshire Business First | Bucks Confident Futures Show </a>
+      <p>The Confident Futures Skills Show offers a uniquely enriching experience, tailored for individuals with speciial educational needs, disabilities (SEND), and others facing barriers to employment. With a focus on inclusivity and sensory consciousness, this event champions Disability Confident employers across diverse sectors, providing a spacious and welcoming environment for exploration and connection</p>
+      <br>
+      <a href="https://nationalcareers.service.gov.uk">Careers Advice - Job Profiles, Infomation and Resources | National Careers Advice</a>
+      <p>National Careers Service provides free careers information, advice and guidance. We can help you make decisions at all stages in your career</p>
+    </div>
   </div>
 
   <div id="footer"></div>
